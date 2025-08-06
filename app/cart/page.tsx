@@ -68,7 +68,7 @@ export default function CartPage() {
               <div className="text-xl font-bold">
                 Total: ${total.toFixed(2)}
               </div>
-              <button className="btn-primary">Proceed to Checkout</button>
+              <Link href="/checkout" className="btn-primary">Proceed to Checkout</Link>
             </div>
           </div>
         )}
