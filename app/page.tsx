@@ -1,7 +1,6 @@
 import React from "react";
 import HeroCarousel from "./components/HeroCarousel";
 import Navigation from "./components/Navigation";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -17,12 +16,10 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="w-full h-64 relative">
-                  <Image
+                  <img
                     src="/images/Seasonal/pie-1.png"
                     alt="Classic Apple Pie"
-                    className="object-cover"
-                    fill
-                    sizes="(min-width:768px) 33vw, 100vw"
+                    className="w-full h-64 object-cover"
                   />
                 </div>
                 <div className="p-4">
@@ -35,12 +32,10 @@ export default function Home() {
 
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="w-full h-64 relative">
-                  <Image
+                  <img
                     src="/images/Seasonal/pie-2.png"
                     alt="Pumpkin Pie"
-                    className="object-cover"
-                    fill
-                    sizes="(min-width:768px) 33vw, 100vw"
+                    className="w-full h-64 object-cover"
                   />
                 </div>
                 <div className="p-4">
@@ -51,12 +46,10 @@ export default function Home() {
 
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="w-full h-64 relative">
-                  <Image
+                  <img
                     src="/images/Seasonal/pie-3.png"
                     alt="Chocolate Pecan Pie"
-                    className="object-cover"
-                    fill
-                    sizes="(min-width:768px) 33vw, 100vw"
+                    className="w-full h-64 object-cover"
                   />
                 </div>
                 <div className="p-4">

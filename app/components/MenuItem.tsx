@@ -1,5 +1,4 @@
 import { Pie } from "../lib/types";
-import Image from "next/image";
 import AddToCartButton from "./AddToCartButton";
 
 export default function MenuItem({ pies }: { pies: Pie[] }) {
@@ -11,16 +10,10 @@ export default function MenuItem({ pies }: { pies: Pie[] }) {
           className="bg-white rounded-lg shadow-md overflow-hidden"
         >
           <div className="relative h-64 w-full">
-            <Image
+            <img
               src={pie.image}
               alt={pie.name}
-              className="object-cover"
-              fill
-              sizes="(min-width:768px) 33vw, 100vw"
-              quality={75}
-              loading="lazy"
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPMiYwMAwADzQF2G9dTZgAAAABJRU5ErkJggg=="
+              className="w-full h-64 object-cover"
             />
           </div>
           <div className="p-4">

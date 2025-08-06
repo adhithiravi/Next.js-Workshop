@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 const heroSlides = [
   {
@@ -46,20 +45,14 @@ export default function HeroCarousel() {
         {heroSlides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
           >
             <div className="hero-overlay" />
-            <Image
+            <img
               src={slide.image}
               alt={slide.title}
-              className="object-cover"
-              fill
-              priority
-              sizes="100vw"
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8mCJUDwAFHQHICiHmvgAAAABJRU5ErkJggg=="
+              className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="hero-content">
               <h1 className="text-5xl font-serif font-bold mb-6">
@@ -77,9 +70,8 @@ export default function HeroCarousel() {
         {heroSlides.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentIndex ? "bg-white" : "bg-gray-400"
-            }`}
+            className={`w-3 h-3 rounded-full transition-colors ${index === currentIndex ? "bg-white" : "bg-gray-400"
+              }`}
             onClick={() => setCurrentIndex(index)}
           />
         ))}
