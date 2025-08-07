@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
+import Image from "next/image";
 
 export default function Navigation() {
   const { items } = useCart();
@@ -16,10 +17,13 @@ export default function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <div className="relative h-16 w-16">
-                <img
+                <Image
                   src="/images/logo.png"
                   alt="Bethany's Pie Shop"
-                  className="h-16 w-auto"
+                  className="object-contain"
+                  fill
+                  sizes="64px"
+                  quality={100}
                 />
               </div>
             </Link>
