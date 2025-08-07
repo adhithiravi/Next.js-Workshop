@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import HeroCarousel from "./components/HeroCarousel";
 import Navigation from "./components/Navigation";
 import PiesOfTheMonth from "./components/PiesOfTheMonth";
+import LocationMap from "./components/LocationMap";
 import { Pie } from "./lib/types";
 import { getPiesOfTheMonth } from "./lib/getPiesOfTheMonth";
 
@@ -30,6 +31,7 @@ export default function Home() {
       <HeroCarousel />
       <section className="py-12 bg-white">
         <PiesOfTheMonth pies={pies} />
+        <LocationMap />
       </section>
     </div>
   );
