@@ -14,7 +14,7 @@ export default async function OrderFormServer() {
   );
 
   return (
-    <form action={submitOrder} method="post" className="space-y-4">
+    <form action={submitOrder} className="space-y-4">
       {items.map((item: any) => (
         <div key={item.id} className="flex justify-between">
           <span>{item.name} x {item.quantity}</span>
