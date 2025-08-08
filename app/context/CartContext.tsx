@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { Pie } from "../lib/types";
 
 interface CartItem extends Pie {
@@ -20,6 +20,11 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
+
+  useEffect(() => {
+    document.cookie = `cart=${encodeURIComponent(JSON.stringify(items))};path=/`;
+  }, [items]);
+
 
   const addToCart = (pie: Pie) => {
     setItems((currentItems) => {
