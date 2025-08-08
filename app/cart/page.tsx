@@ -2,7 +2,6 @@
 
 import React from "react";
 import { useCart } from "../context/CartContext";
-import Navigation from "../components/Navigation";
 import Link from "next/link";
 import { FaTrash } from "react-icons/fa";
 import Image from "next/image";
@@ -12,7 +11,6 @@ export default function CartPage() {
 
   return (
     <>
-      <Navigation />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-3xl font-serif font-bold mb-8">Your Cart</h1>
         {items.length === 0 ? (

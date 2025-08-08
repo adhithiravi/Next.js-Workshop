@@ -1,18 +1,14 @@
 
 import React from "react";
 import { getPies } from "../../lib/getPies";
-import Navigation from "../../components/Navigation";
 import MenuItem from "../../components/MenuItem";
 
 export default async function CheesecakePage() {
   const pies = await getPies("cheesecake");
   return (
-    <>
-      <Navigation />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-3xl font-serif font-bold mb-8">Cheesecakes</h1>
-        <MenuItem pies={pies} />
-      </div>
-    </>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h1 className="text-3xl font-serif font-bold mb-8">Cheesecakes</h1>
+      <MenuItem pies={pies} />
+    </div>
   );
 }

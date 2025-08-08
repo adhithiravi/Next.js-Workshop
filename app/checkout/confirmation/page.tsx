@@ -3,7 +3,6 @@
 import { useEffect } from 'react';
 import { useCart } from '../../context/CartContext';
 import Link from 'next/link';
-import Navigation from '../../components/Navigation';
 
 export default function ConfirmationPage() {
 	const { clearCart } = useCart();
@@ -16,7 +15,6 @@ export default function ConfirmationPage() {
 
 	return (
 		<>
-			<Navigation />
 			<div className="max-w-md mx-auto px-4 py-16 text-center">
 				<h1 className="text-4xl font-bold 600 mb-4">
 					🎉 Thank you for your order!

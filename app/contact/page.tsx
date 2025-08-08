@@ -1,10 +1,8 @@
 import React from "react";
-import Navigation from "../components/Navigation";
 
 export default function ContactPage() {
   return (
     <>
-      <Navigation />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-serif font-bold mb-8">Contact Us</h1>
