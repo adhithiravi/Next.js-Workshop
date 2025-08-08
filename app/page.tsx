@@ -1,5 +1,4 @@
 // React Server Component
-
 import React, { Suspense } from "react";
 import HeroCarousel from "./components/HeroCarousel";
 import Navigation from "./components/Navigation";
