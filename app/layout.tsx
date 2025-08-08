@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { CartProvider } from "./context/CartContext";
 import { Playfair, Poppins } from "next/font/google";
+import Navigation from "./components/Navigation";
 
 const playfair = Playfair({
   weight: ["400", "700"],
@@ -30,7 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${poppins.variable}`}>
       <body>
-        <CartProvider>{children}</CartProvider>
+        <CartProvider>
+          <Navigation />
+          {children}</CartProvider>
       </body>
     </html>
   );

@@ -4,7 +4,6 @@
 import { FormEvent, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useCart } from '../context/CartContext';
-import Navigation from '../components/Navigation';
 
 export default function CheckoutPage() {
 	const { items, total, clearCart } = useCart();
@@ -31,7 +30,6 @@ export default function CheckoutPage() {
 
 	return (
 		<>
-			<Navigation />
 			<form onSubmit={handleSubmit} className="max-w-xl mx-auto p-8 space-y-6">
 				<h1 className="text-3xl font-bold">Checkout</h1>
 

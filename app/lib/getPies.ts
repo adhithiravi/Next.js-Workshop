@@ -5,6 +5,7 @@ export async function getPies(category?: string) {
       url.searchParams.set("category", category);
     }
 
+    // Dynamic data fetching - no caching
     const res = await fetch(url, {
       cache: "no-store",
     });

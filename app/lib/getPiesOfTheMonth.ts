@@ -5,8 +5,9 @@ export async function getPiesOfTheMonth(category?: string) {
       url.searchParams.set("category", category);
     }
 
+    // Enable revalidation for this fetch
     const res = await fetch(url, {
-      cache: "no-store",
+      next: { revalidate: 120 },
     });
 
     const data = await res.json();
