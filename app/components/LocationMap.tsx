@@ -37,7 +37,7 @@ export default function LocationMap() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="rounded-xl shadow-lg object-cover object-center w-full max-w-xl"
-            ></iframe>
+            />
           </div>
         </div>
       </div>
